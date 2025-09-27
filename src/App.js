@@ -17,6 +17,7 @@ function Avatar() {
     <img
       src="https://media.licdn.com/dms/image/v2/D4E03AQG8GCkMi20Z6w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730443401279?e=2147483647&v=beta&t=RjT8rMGHFCB0qn1oiJxchrV27Ij2T9HZaiwgUV9ppjw"
       alt="Profile Photo"
+      className="avatar"
     />
   );
 }
