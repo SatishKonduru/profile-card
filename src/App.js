@@ -1,25 +1,58 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="card">
+      <Avatar />
+      <div className="data">
+        <Intro />
+        <Skillset />
+      </div>
     </div>
   );
 }
 
-export default App;
+function Avatar() {
+  return (
+    <img
+      src="https://media.licdn.com/dms/image/v2/D4E03AQG8GCkMi20Z6w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730443401279?e=2147483647&v=beta&t=RjT8rMGHFCB0qn1oiJxchrV27Ij2T9HZaiwgUV9ppjw"
+      alt="Profile Photo"
+    />
+  );
+}
+
+function Intro() {
+  return (
+    <div>
+      <h1>Satish Konduru</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur
+        cumque esse laborum quae nulla saepe dicta? Fuga dolor dolorem minima
+        illo quisquam incidunt possimus ullam vel, cum, ut fugit sapiente!
+      </p>
+    </div>
+  );
+}
+
+function Skillset() {
+  return (
+    <div className="skill-set">
+      <Skill skill="React" emoji="💪" color="blue" textColor="white" />
+      <Skill skill="HTML+CSS" emoji="💪" color="orange" />
+      <Skill skill="JavaScript" emoji="💪" color="yellow" />
+      <Skill skill="Angular" emoji="💪" color="tomato" />
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
+    <div
+      className="skill"
+      style={{ backgroundColor: props.color, color: props.textColor }}
+    >
+      <span>{props.skill}</span>
+      <span>{props.emoji}</span>
+    </div>
+  );
+}
